@@ -1,4 +1,7 @@
 # Fetch Rewards Meal by Luis Samayoa
+![my image](https://github.com/L-Samayoa/fetch_rewards_meals/blob/master/fetch_rewards_meals_logo.png)
+<sub>Edited logo made by me, feel free to take!</sub>
+
 Hello, and welcome to my demo app for Fetch Rewards! 
 
 This demo app uses TheMealDB (https://themealdb.com/api.php) to fetch meals (desserts) and output them in a list. From there, users are able to select any meal on the list to then see the details on that meal. 
