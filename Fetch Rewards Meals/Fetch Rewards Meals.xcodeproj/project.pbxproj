@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B1175642C13632E00409A8E /* Fetch_Rewards_MealsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175632C13632E00409A8E /* Fetch_Rewards_MealsApp.swift */; };
+		5B1175662C13632E00409A8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175652C13632E00409A8E /* ContentView.swift */; };
+		5B1175682C13633000409A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1175672C13633000409A8E /* Assets.xcassets */; };
+		5B11756B2C13633000409A8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B11756A2C13633000409A8E /* Preview Assets.xcassets */; };
+		5B11758E2C13676100409A8E /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11758D2C13676100409A8E /* MealListViewModel.swift */; };
+		5B1175902C13692F00409A8E /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11758F2C13692F00409A8E /* MealModel.swift */; };
+		5B1175922C1392E600409A8E /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175912C1392E600409A8E /* MealDetailsView.swift */; };
+		5B1175942C13931C00409A8E /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175932C13931C00409A8E /* APIRequestHandler.swift */; };
+		5B1175982C1396F500409A8E /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175972C1396F500409A8E /* MealsListView.swift */; };
+		5B11759E2C1399CD00409A8E /* MealListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11759D2C1399CD00409A8E /* MealListRow.swift */; };
+		5B1175A12C139D8B00409A8E /* MealDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175A02C139D8B00409A8E /* MealDetailsViewModel.swift */; };
+		5B1175A32C139DC200409A8E /* MealDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1175A22C139DC200409A8E /* MealDetailsModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B1175712C13633100409A8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B1175582C13632D00409A8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B11755F2C13632E00409A8E;
+			remoteInfo = "Fetch Rewards Meals";
+		};
+		5B11757B2C13633100409A8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B1175582C13632D00409A8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B11755F2C13632E00409A8E;
+			remoteInfo = "Fetch Rewards Meals";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B1175602C13632E00409A8E /* Fetch Rewards Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch Rewards Meals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1175632C13632E00409A8E /* Fetch_Rewards_MealsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_Rewards_MealsApp.swift; sourceTree = "<group>"; };
+		5B1175652C13632E00409A8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B1175672C13633000409A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B11756A2C13633000409A8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B1175702C13633100409A8E /* Fetch Rewards MealsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch Rewards MealsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B11757A2C13633100409A8E /* Fetch Rewards MealsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch Rewards MealsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B11758D2C13676100409A8E /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
+		5B11758F2C13692F00409A8E /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		5B1175912C1392E600409A8E /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
+		5B1175932C13931C00409A8E /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
+		5B1175972C1396F500409A8E /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
+		5B11759D2C1399CD00409A8E /* MealListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListRow.swift; sourceTree = "<group>"; };
+		5B1175A02C139D8B00409A8E /* MealDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewModel.swift; sourceTree = "<group>"; };
+		5B1175A22C139DC200409A8E /* MealDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B11755D2C13632E00409A8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B11756D2C13633100409A8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1175772C13633100409A8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B1175572C13632D00409A8E = {
+			isa = PBXGroup;
+			children = (
+				5B1175622C13632E00409A8E /* Fetch Rewards Meals */,
+				5B1175612C13632E00409A8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B1175612C13632E00409A8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B1175602C13632E00409A8E /* Fetch Rewards Meals.app */,
+				5B1175702C13633100409A8E /* Fetch Rewards MealsTests.xctest */,
+				5B11757A2C13633100409A8E /* Fetch Rewards MealsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B1175622C13632E00409A8E /* Fetch Rewards Meals */ = {
+			isa = PBXGroup;
+			children = (
+				5B1175652C13632E00409A8E /* ContentView.swift */,
+				5B1175632C13632E00409A8E /* Fetch_Rewards_MealsApp.swift */,
+				5B11759C2C1397B600409A8E /* Handlers */,
+				5B11759A2C13979400409A8E /* ViewModels */,
+				5B1175992C13972C00409A8E /* Views */,
+				5B11759B2C1397A200409A8E /* Models */,
+				5B1175672C13633000409A8E /* Assets.xcassets */,
+				5B1175692C13633000409A8E /* Preview Content */,
+			);
+			path = "Fetch Rewards Meals";
+			sourceTree = "<group>";
+		};
+		5B1175692C13633000409A8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B11756A2C13633000409A8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B1175992C13972C00409A8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B1175972C1396F500409A8E /* MealsListView.swift */,
+				5B1175912C1392E600409A8E /* MealDetailsView.swift */,
+				5B11759D2C1399CD00409A8E /* MealListRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B11759A2C13979400409A8E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B11758D2C13676100409A8E /* MealListViewModel.swift */,
+				5B1175A02C139D8B00409A8E /* MealDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5B11759B2C1397A200409A8E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B11758F2C13692F00409A8E /* MealModel.swift */,
+				5B1175A22C139DC200409A8E /* MealDetailsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B11759C2C1397B600409A8E /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				5B1175932C13931C00409A8E /* APIRequestHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B11755F2C13632E00409A8E /* Fetch Rewards Meals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1175842C13633100409A8E /* Build configuration list for PBXNativeTarget "Fetch Rewards Meals" */;
+			buildPhases = (
+				5B11755C2C13632E00409A8E /* Sources */,
+				5B11755D2C13632E00409A8E /* Frameworks */,
+				5B11755E2C13632E00409A8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fetch Rewards Meals";
+			productName = "Fetch Rewards Meals";
+			productReference = 5B1175602C13632E00409A8E /* Fetch Rewards Meals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B11756F2C13633100409A8E /* Fetch Rewards MealsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1175872C13633100409A8E /* Build configuration list for PBXNativeTarget "Fetch Rewards MealsTests" */;
+			buildPhases = (
+				5B11756C2C13633100409A8E /* Sources */,
+				5B11756D2C13633100409A8E /* Frameworks */,
+				5B11756E2C13633100409A8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B1175722C13633100409A8E /* PBXTargetDependency */,
+			);
+			name = "Fetch Rewards MealsTests";
+			productName = "Fetch Rewards MealsTests";
+			productReference = 5B1175702C13633100409A8E /* Fetch Rewards MealsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B1175792C13633100409A8E /* Fetch Rewards MealsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B11758A2C13633100409A8E /* Build configuration list for PBXNativeTarget "Fetch Rewards MealsUITests" */;
+			buildPhases = (
+				5B1175762C13633100409A8E /* Sources */,
+				5B1175772C13633100409A8E /* Frameworks */,
+				5B1175782C13633100409A8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B11757C2C13633100409A8E /* PBXTargetDependency */,
+			);
+			name = "Fetch Rewards MealsUITests";
+			productName = "Fetch Rewards MealsUITests";
+			productReference = 5B11757A2C13633100409A8E /* Fetch Rewards MealsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B1175582C13632D00409A8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					5B11755F2C13632E00409A8E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					5B11756F2C13633100409A8E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 5B11755F2C13632E00409A8E;
+					};
+					5B1175792C13633100409A8E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 5B11755F2C13632E00409A8E;
+					};
+				};
+			};
+			buildConfigurationList = 5B11755B2C13632E00409A8E /* Build configuration list for PBXProject "Fetch Rewards Meals" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B1175572C13632D00409A8E;
+			productRefGroup = 5B1175612C13632E00409A8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B11755F2C13632E00409A8E /* Fetch Rewards Meals */,
+				5B11756F2C13633100409A8E /* Fetch Rewards MealsTests */,
+				5B1175792C13633100409A8E /* Fetch Rewards MealsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B11755E2C13632E00409A8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B11756B2C13633000409A8E /* Preview Assets.xcassets in Resources */,
+				5B1175682C13633000409A8E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B11756E2C13633100409A8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1175782C13633100409A8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B11755C2C13632E00409A8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1175662C13632E00409A8E /* ContentView.swift in Sources */,
+				5B11758E2C13676100409A8E /* MealListViewModel.swift in Sources */,
+				5B1175922C1392E600409A8E /* MealDetailsView.swift in Sources */,
+				5B1175982C1396F500409A8E /* MealsListView.swift in Sources */,
+				5B1175A12C139D8B00409A8E /* MealDetailsViewModel.swift in Sources */,
+				5B1175A32C139DC200409A8E /* MealDetailsModel.swift in Sources */,
+				5B1175642C13632E00409A8E /* Fetch_Rewards_MealsApp.swift in Sources */,
+				5B1175902C13692F00409A8E /* MealModel.swift in Sources */,
+				5B1175942C13931C00409A8E /* APIRequestHandler.swift in Sources */,
+				5B11759E2C1399CD00409A8E /* MealListRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B11756C2C13633100409A8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1175762C13633100409A8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B1175722C13633100409A8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B11755F2C13632E00409A8E /* Fetch Rewards Meals */;
+			targetProxy = 5B1175712C13633100409A8E /* PBXContainerItemProxy */;
+		};
+		5B11757C2C13633100409A8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B11755F2C13632E00409A8E /* Fetch Rewards Meals */;
+			targetProxy = 5B11757B2C13633100409A8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5B1175822C13633100409A8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B1175832C13633100409A8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B1175852C13633100409A8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fetch Rewards Meals/Preview Content\"";
+				DEVELOPMENT_TEAM = PR78PS892P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samayoaluis.Fetch-Rewards-Meals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B1175862C13633100409A8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fetch Rewards Meals/Preview Content\"";
+				DEVELOPMENT_TEAM = PR78PS892P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samayoaluis.Fetch-Rewards-Meals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B1175882C13633100409A8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR78PS892P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samayoaluis.Fetch-Rewards-MealsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fetch Rewards Meals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fetch Rewards Meals";
+			};
+			name = Debug;
+		};
+		5B1175892C13633100409A8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR78PS892P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samayoaluis.Fetch-Rewards-MealsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fetch Rewards Meals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fetch Rewards Meals";
+			};
+			name = Release;
+		};
+		5B11758B2C13633100409A8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR78PS892P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samayoaluis.Fetch-Rewards-MealsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fetch Rewards Meals";
+			};
+			name = Debug;
+		};
+		5B11758C2C13633100409A8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR78PS892P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samayoaluis.Fetch-Rewards-MealsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fetch Rewards Meals";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B11755B2C13632E00409A8E /* Build configuration list for PBXProject "Fetch Rewards Meals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1175822C13633100409A8E /* Debug */,
+				5B1175832C13633100409A8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1175842C13633100409A8E /* Build configuration list for PBXNativeTarget "Fetch Rewards Meals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1175852C13633100409A8E /* Debug */,
+				5B1175862C13633100409A8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1175872C13633100409A8E /* Build configuration list for PBXNativeTarget "Fetch Rewards MealsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1175882C13633100409A8E /* Debug */,
+				5B1175892C13633100409A8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B11758A2C13633100409A8E /* Build configuration list for PBXNativeTarget "Fetch Rewards MealsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B11758B2C13633100409A8E /* Debug */,
+				5B11758C2C13633100409A8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B1175582C13632D00409A8E /* Project object */;
+}
