@@ -23,35 +23,55 @@ struct MealDetailsView: View {
                 
             // If meal details loaded correctly, show them
             } else if let mealDetails = viewModel.mealDetails {
-                // Image of Meal
-                AsyncImage(url: URL(string: mealDetails.strMealThumb)) { result in
-                    switch result {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 200)
-                    default:
-                        Image(systemName: "photo.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 200)
+                ScrollView(.vertical) {
+                    // Image of Meal
+                    AsyncImage(url: URL(string: mealDetails.strMealThumb)) { result in
+                        switch result {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 200)
+                        default:
+                            Image(systemName: "photo.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 200)
+                        }
                     }
+                                        
+                    // Meal name
+                    Text(mealDetails.strMeal)
+                        .font(.system(.title))
+                        .bold()
+                    
+                    // List of ingredients
+                    VStack(spacing: 0) {
+                        Text("Ingredients")
+                            .bold()
+                            .font(.title2)
+                            .padding(.bottom, 5)
+                        
+                        ForEach(mealDetails.ingredients, id: \.self) { ingredient in
+                            Text("\(ingredient.ingredientName): \(ingredient.measurement)")
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 5)
+                    .background(Color.orange.opacity(0.5))
+                    
+                    // Instructions
+                    VStack(spacing: 0) {
+                        Text("Instructions")
+                            .font(.title2)
+                            .bold()
+                            .padding(.bottom, 5)
+                        
+                        Text(mealDetails.strInstructions)
+                            .padding(5)
+                    }
+                    .padding(.vertical, 5)
                 }
-                Spacer()
-                
-                // Meal name
-                Text(mealDetails.strMeal)
-                    .font(.system(.title))
-                    .bold()
-                    .padding(.bottom, 25)
-                
-                // List of instructions
-                List(mealDetails.ingredients, id: \.self) { ingredient in
-                    Text("\(ingredient.ingredientName): \(ingredient.measurement)")
-                        .listRowBackground(Color.orange.opacity(0.5))
-                }
-                .listStyle(.plain)
                 
             // If we have finished loading and we don't have meal details, show error and let user try again.
             } else {
@@ -78,6 +98,7 @@ struct MealDetailsView: View {
         }
         .frame(maxWidth: .infinity)
         .background(Color.purple.opacity(0.5))
+        .toolbarBackground(Color.purple.opacity(0.5), for: .navigationBar)
         .onAppear {
             Task {
                 await viewModel.getMealDetails()

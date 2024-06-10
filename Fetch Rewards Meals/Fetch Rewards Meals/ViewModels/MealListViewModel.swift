@@ -17,6 +17,7 @@ class MealListViewModel: ObservableObject {
     init(meals: [Meal] = []) {
         self.meals = meals
         
+        // Load the meals only once as opposed to every single time we return to the list
         Task {
             await getMeals()
         }
@@ -36,7 +37,7 @@ class MealListViewModel: ObservableObject {
         
         // Fetch meals
         let response = await APIRequestHandler.makeRequest(url: url, expectedTypeResp: MealResponse.self)
-        meals = response?.meals.sorted(by: { $0.strMeal > $1.strMeal })
+        meals = response?.meals.sorted(by: { $0.strMeal < $1.strMeal })
         isLoading = false
     }
 }
