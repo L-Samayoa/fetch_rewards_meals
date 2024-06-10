@@ -37,7 +37,9 @@ struct MealsListView: View {
                 // List of meals
                 List(meals, id: \.self) { meal in
                     NavigationLink {
-                        MealDetailsView(viewModel: MealDetailsViewModel(meal: meal))
+                        withAnimation {
+                            MealDetailsView(viewModel: MealDetailsViewModel(meal: meal))
+                        }
                     } label: {
                         MealListRow(meal: meal)
                     }

@@ -12,36 +12,71 @@ struct MealDetailsView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // Image of Meal
-            AsyncImage(url: URL(string: viewModel.mealDetails?.strMealThumb ?? "")) { result in
-                switch result {
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 200)
-                default:
-                    Image(systemName: "photo.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 200)
+            // If loading, show loading spinner
+            if (viewModel.isLoading) {
+                Spacer()
+
+                ProgressView("Loading meals...")
+                    .controlSize(.extraLarge)
+                
+                Spacer()
+                
+            // If meal details loaded correctly, show them
+            } else if let mealDetails = viewModel.mealDetails {
+                // Image of Meal
+                AsyncImage(url: URL(string: mealDetails.strMealThumb)) { result in
+                    switch result {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 200)
+                    default:
+                        Image(systemName: "photo.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 200)
+                    }
                 }
+                Spacer()
+                
+                // Meal name
+                Text(mealDetails.strMeal)
+                    .font(.system(.title))
+                    .bold()
+                    .padding(.bottom, 25)
+                
+                // List of instructions
+                List(mealDetails.ingredients, id: \.self) { ingredient in
+                    Text("\(ingredient.ingredientName): \(ingredient.measurement)")
+                        .listRowBackground(Color.orange.opacity(0.5))
+                }
+                .listStyle(.plain)
+                
+            // If we have finished loading and we don't have meal details, show error and let user try again.
+            } else {
+                Spacer()
+                
+                Text("An error has occured. Please try loading the meals again.")
+                    .font(.largeTitle)
+                
+                Button(action: {
+                    Task {
+                        await viewModel.getMealDetails()
+                    }
+                    
+                }, label: {
+                    Text("Reload meals")
+                        .font(.largeTitle)
+                        .padding(10)
+                        .background(.purple.opacity(0.2))
+                        .border(.yellow)
+                })
+                
+                Spacer()
             }
-            Spacer()
-            
-            // Meal name
-            Text(viewModel.mealDetails?.strMeal ?? "")
-                .font(.system(.title))
-                .bold()
-                .padding(.bottom, 25)
-            
-            // List of instructions
-            List(viewModel.mealDetails?.ingredients ?? [], id: \.self) { ingredient in
-                Text("\(ingredient.ingredientName): \(ingredient.measurement)")
-                    .listRowBackground(Color.orange.opacity(0.5))
-            }
-            .listStyle(.plain)
         }
+        .frame(maxWidth: .infinity)
         .background(Color.purple.opacity(0.5))
         .onAppear {
             Task {

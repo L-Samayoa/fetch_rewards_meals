@@ -11,7 +11,7 @@ import Foundation
 class MealListViewModel: ObservableObject {
     // Meals to display
     @Published var meals: [Meal]?
-    // Determine if app is currently loading
+    // Determine if meals list is currently loading
     @Published var isLoading: Bool = false
     
     init(meals: [Meal] = []) {

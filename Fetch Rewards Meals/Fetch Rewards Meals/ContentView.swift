@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var showSideMenu = NavigationSplitViewVisibility.all
-    
     var body: some View {
         NavigationStack {
             MealsListView()

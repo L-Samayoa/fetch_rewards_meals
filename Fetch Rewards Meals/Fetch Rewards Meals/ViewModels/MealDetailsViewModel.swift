@@ -11,6 +11,8 @@ import Foundation
 class MealDetailsViewModel: ObservableObject {
     let meal: Meal
     @Published var mealDetails: MealDetails?
+    // Determine if meal details is currently loading
+    @Published var isLoading: Bool = false
     
     init(meal: Meal) {
         self.meal = meal
@@ -19,15 +21,18 @@ class MealDetailsViewModel: ObservableObject {
     /// Fetches meal details for a specific meal
     @MainActor
     func getMealDetails() async {
+        isLoading = true
+        
         // Make URL from mealdb string
         guard let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(meal.idMeal)") else {
             print("Error, cannot make url.")
+            isLoading = false
             return
         }
         
         // Fetch meal details
-        // TODO: If error, show error screen and button to refresh
         let response = await APIRequestHandler.makeRequest(url: url, expectedTypeResp: MealDetailsResponse.self)
         mealDetails = response?.meals.first
+        isLoading = false
     }
 }

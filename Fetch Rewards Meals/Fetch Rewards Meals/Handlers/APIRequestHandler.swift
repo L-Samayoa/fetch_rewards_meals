@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Simple network handler that makes requests to some API and decodes the response to some type T
 class APIRequestHandler {
     static func makeRequest<T: Codable>(url: URL, expectedTypeResp: T.Type) async -> T? {
         // Attempt to fetch data
